@@ -2,8 +2,8 @@ QUESTION 1
 -- Create a new table in 1NF
 CREATE TABLE ProductDetail(
     OrderID INT,
-    CustomerName VARCHAR(255),
-    Product VARCHAR(255)
+    CustomerName VARCHAR(100),
+    Product VARCHAR(100)
 );
 
 -- Insert the separated rows
@@ -21,13 +21,13 @@ QUESTION 2
 -- Table 1: Orders (removes partial dependency)
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
-    CustomerName VARCHAR(255)
+    CustomerName VARCHAR(100)
 );
 
 -- Table 2: OrderDetails (pure many-to-many relationship)
 CREATE TABLE Product(
     OrderID INT,
-    Product VARCHAR(255),
+    Product VARCHAR(100),
     Quantity INT,
     PRIMARY KEY (OrderID, Product),
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
