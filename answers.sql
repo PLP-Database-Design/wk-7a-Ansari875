@@ -24,8 +24,8 @@ CREATE TABLE Orders (
     CustomerName VARCHAR(100)
 );
 
--- Table 2: OrderDetails (pure many-to-many relationship)
-CREATE TABLE Product(
+-- Table 2: Product (pure many-to-many relationship)
+CREATE TABLE Product (
     OrderID INT,
     Product VARCHAR(100),
     Quantity INT,
