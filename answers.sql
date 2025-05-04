@@ -1,13 +1,13 @@
 QUESTION 1
 -- Create a new table in 1NF
-CREATE TABLE ProductDetail_1NF (
+CREATE TABLE ProductDetail(
     OrderID INT,
     CustomerName VARCHAR(255),
     Product VARCHAR(255)
 );
 
 -- Insert the separated rows
-INSERT INTO ProductDetail_1NF (OrderID, CustomerName, Product)
+INSERT INTO ProductDetail(OrderID, CustomerName, Product)
 VALUES
 (101, 'John Doe', 'Laptop'),
 (101, 'John Doe', 'Mouse'),
@@ -25,7 +25,7 @@ CREATE TABLE Orders (
 );
 
 -- Table 2: OrderDetails (pure many-to-many relationship)
-CREATE TABLE OrderDetails_2NF (
+CREATE TABLE Product(
     OrderID INT,
     Product VARCHAR(255),
     Quantity INT,
@@ -41,7 +41,7 @@ VALUES
 (103, 'Emily Clark');
 
 -- Insert data into OrderDetails_2NF table
-INSERT INTO OrderDetails_2NF (OrderID, Product, Quantity)
+INSERT INTO Product(OrderID, Product, Quantity)
 VALUES
 (101, 'Laptop', 2),
 (101, 'Mouse', 1),
